@@ -41,37 +41,3 @@ console.log(fearNotLetter("abce")); //should return the string d.
 console.log(fearNotLetter("abcdefghjklmno")); //should return the string i.
 console.log(fearNotLetter("stvwx")); //should return the string u.
 console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz")); //should return undefined.
-
-
-
-
-
-/*
-
-
-function fearNotLetter(str) {
-  for (var i = 0; i < str.length; i++) {
-    //code of current character 
-    var code = str.charCodeAt(i);
-
-    // if code of current character is not equal to first character + no of iteration hence character has been escaped 
-    if (code !== str.charCodeAt(0) + i) {
-    // if current character has escaped one character find previous char and return 
-      return String.fromCharCode(code - 1);
-    }
-  }
-  return undefined;
-}
-
-*/
-
-/*
-function fearNotLetter(str) {
-  for (let i = 1; i < str.length; ++i) {
-    if (str.charCodeAt(i) - str.charCodeAt(i - 1) > 1) {
-      return String.fromCharCode(str.charCodeAt(i - 1) + 1);
-    }
-  }
-}
-
-*/
