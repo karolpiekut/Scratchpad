@@ -4,15 +4,10 @@
 
 function fearNotLetter(str) {
     let alpha = "abcdefghijklmnopqrstuvwxyz";
-    let alphaIndex; //index of the first letter in alpha based on str
+    let alphaIndex = alpha.indexOf(str[0]); //index of the first letter in alpha based on str
     let strIndex = 0;
     let missing;
-    for (let i = 0; i < alpha.length; i++) {
-        if (str[0] == alpha[i]) {
-            alphaIndex = i;
-        }
-    }
-
+  
     while (strIndex < str.length){
       if (alpha[alphaIndex] != str[strIndex]) {
         missing = alpha[alphaIndex];
