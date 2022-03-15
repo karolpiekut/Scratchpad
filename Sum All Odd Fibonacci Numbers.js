@@ -6,19 +6,19 @@
 //For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less than or equal to 10 are 1, 1, 3, and 5.
 
 function sumFibs(num) {
-  let fibbonacci = [1, 1];
-  let hmm = 2;    
-  let sum = 0;
+    let fibbonacci = [1, 1];
+    let hmm = 2;
+    let sum = 0;
     while (hmm <= num) {
-          for (let i = 0; i < fibbonacci.length; i++){
-        if ((fibbonacci[i] + fibbonacci[i+1]) == hmm){
-          fibbonacci.push(hmm);
+        for (let i = 0; i < fibbonacci.length; i++) {
+            if ((fibbonacci[i] + fibbonacci[i + 1]) == hmm) {
+                fibbonacci.push(hmm);
+            }
         }
-      }
-      hmm++
+        hmm++
     }
 
-      for (let i = 0; i < fibbonacci.length; i++) {
+    for (let i = 0; i < fibbonacci.length; i++) {
         if (fibbonacci[i] % 2 != 0) {
             sum += fibbonacci[i];
         }
