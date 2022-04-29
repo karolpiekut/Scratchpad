@@ -5,11 +5,15 @@
 
 
 function smallestCommons(arr) {
-    return arr;
+    let arr2 = arr.sort(function(a,b){
+        return a-b;
+    });
+    let arr3 = [];
+    for (let i = arr[0]; i <= arr[1]; i++{
+        arr3.push(i);
 }
-
-smallestCommons([1,5]);
-
+    return arr3;
+}
 
 console.log(smallestCommons([1, 5])); //should return 60.
 console.log(smallestCommons([5, 1])); //should return 60.
