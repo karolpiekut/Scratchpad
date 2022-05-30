@@ -18,16 +18,20 @@
 
 <!--functions---------------------------------------------------------------------------------------------------------->
 <script>
-    console.log("p[2]");
-
     function swap() {
-        let d = document.getElementById("tagg");  cv bv j
-        d.lastChild.innerHTML = "All his men.";
+        let d = document.getElementById("tagg");
+        let pCounter = 0;
+        for (let i = 0; i < d.childNodes.length; i++) {
+            if (d.childNodes[i].nodeType === 1) {
+                pCounter++;
+            }
+            if (pCounter === 2) {
+                d.childNodes[i].innerHTML = "All his men.";
+                break;
+            }
+        }
     }
-
 
 </script>
 </body>
 </html>
-
-

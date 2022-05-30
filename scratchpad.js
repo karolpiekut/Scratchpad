@@ -1,16 +1,16 @@
-function primesSum(num) {
-    let integers = [];
-
-
-    for (let i = 2; i <= num; i++) {
-        integers.push(true);
-    }
-    console.log(integers.length);
-
-
-    return integers;
+function Prop() {
+    this.prep = 5;
 }
 
-console.log(primesSum(100));
+var neww = new Prop();
 
 
+
+
+
+
+Prop.prototype.display = function() {
+    alert(this.prep);
+}
+
+neww.display();

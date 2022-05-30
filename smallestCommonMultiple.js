@@ -5,14 +5,22 @@
 
 
 function smallestCommons(arr) {
-    return arr;
-}
+    let arr1 = arr.sort((a, b) => a > b ? 1 : -1);
+    let arr2 = [];
+    let counter = 0;
+    for (let i = arr1[0]; i <= arr1[1]; i++) {
+        arr2.push(i);
+    }
 
-smallestCommons([1,5]);
+
+
+    return arr2;
+}
 
 
 console.log(smallestCommons([1, 5])); //should return 60.
 console.log(smallestCommons([5, 1])); //should return 60.
-console.log(smallestCommons([2, 10])); //should return 2520.
-console.log(smallestCommons([1, 13])); //should return 360360.
-console.log(smallestCommons([23, 18])); //should return 6056820.
+//console.log(smallestCommons([2, 10])); //should return 2520.
+//console.log(smallestCommons([1, 13])); //should return 360360.
+//console.log(smallestCommons([23, 18])); //should return 6056820.
+

@@ -7,12 +7,12 @@ function whatIsInAName(collection, source) {
     return collection.filter(o => Object.keys(source).every(k => o.hasOwnProperty(k) && o[k] === source[k]));
 }
 
-console.log(whatIsInAName([{first: "Romeo", last: "Montague"}, {first: "Mercutio", last: null},
-    {first: "Tybalt", last: "Capulet"}], {last: "Capulet"}));
+console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null },
+{ first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));
 
 
-console.log(whatIsInAName([{"apple": 1, "bat": 2}, {"bat": 2}, {"apple": 1, "bat": 2, "cookie": 2}],
-    {"apple": 1, "bat": 2}));
+console.log(whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }],
+    { "apple": 1, "bat": 2 }));
 
 //-----------------------------------------------------------------------------------------------------------
 
@@ -150,7 +150,7 @@ const stats = {
 };
 
 // Only change code below this line
-const half = ({max, min}) => (max + min) / 2.0;
+const half = ({ max, min }) => (max + min) / 2.0;
 // Only change code above this line
 
 console.log(half(stats))
@@ -306,12 +306,15 @@ let setDateFunctions = [
     "setMilliseconds()",
     "getTime()"
 ]
+
 function replaceValues(array) {
     let newArray = [];
     for (let i = 0; i < array.length; i++) {
         newArray.push(array[i].replace("get", "set"));
-    } return newArray;
+    }
+    return newArray;
 }
+
 console.log(replaceValues(setDateFunctions));
 
 //----------------------functions within functions------------------------------
@@ -319,11 +322,13 @@ console.log(replaceValues(setDateFunctions));
 function tax(value) {
     return value * 0.2;
 }
+
 console.log(tax(100));
 
-function totalCost(value){
+function totalCost(value) {
     return value + tax(value);
 }
+
 console.log(totalCost(100));
 
 //----------------------tell time function------------------------------
@@ -417,8 +422,8 @@ function tellTime() {
 
   <a href="JavaScript:void(0)" onClick="popup('Hi');">Click</a>
   <script>
-	  function popup(message){
-		  alert(message);
+      function popup(message){
+          alert(message);
 
   <input class="one" type="button" value="Click" onClick="alert('Hello world!');">
   <h1 onMouseover="alert('Be sure to do your shopping'); this.style.color = 'red';" onMouseout = "this.style.color = 'black';">The World Ends Tomorrow</h1>
@@ -450,3 +455,4 @@ function tellTime() {
 //document.getElementById(id).innerHTML - for paragraphs, div, and other HTML
 //document.getElementById(id).className += " secondClass"; - for adding new classes
 //function swapPic(eId, newPic) {document.getElementById(eId).src = newPic;} - swapping elements
+//let ps = document.getElementsByTagName("p"); - creates a collection of all tags, in this instance paragraphs

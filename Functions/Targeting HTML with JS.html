@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<button onClick="swap()">change Ps</button>
+<button onClick="fixHed()">Fix Header</button>
+<div id="tagg">
+    <p>test01</p>
+    <p>test02</p>
+    <p>test03</p>
+</div>
+<p>Software engineer</p>
+<table>
+    <tr id="hed">
+        <th>Name</th>
+        <th>Surname</th>
+        <th>City or origin</th>
+    </tr>
+    <tr>
+        <td>Karol</td>
+        <td>Marzena</td>
+        <td>Natalia</td>
+    </tr>
+    <tr>
+    <td>Piekut</td>
+    <td>Piekut</td>
+    <td>Piekut</td>
+    </tr>
+    <tr>
+        <td>Hajnówka</td>
+        <td>Wałbrzych</td>
+        <td>Gillingham</td>
+    </tr>
+</table>
+
+
+<!--functions---------------------------------------------------------------------------------------------------------->
+<script>
+
+    function swap() {
+        let division = document.getElementById("tagg");
+        let divisions = division.getElementsByTagName("p");
+        for (let i = 0; i < divisions.length; i++) {
+            divisions[i].innerHTML = "get to work";
+        }
+    }
+
+    function fixHed() {
+        let hedCell= document.getElementById("hed");
+        let cells = hedCell.getElementsByTagName("th");
+        for (let i = 0; i < cells.length; i++){
+            cells[i].style.backgroundColor = "orange";
+        }
+    }
+</script>
+</body>
+</html>
