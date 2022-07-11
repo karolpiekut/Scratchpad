@@ -1,6 +1,6 @@
 function sumPrimes(num) {
     let arr1 = []; //array range from 2 to num
-    let primes = []; //primes arrange
+    let primes = []; //primes array
     for (let i = 2; i <= num; i++) {
         arr1.push(i);
     } //creates arr1 array
